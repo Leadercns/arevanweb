@@ -1,0 +1,58 @@
+[
+  {
+    "id": "p1",
+    "status": {
+      "zh": "开发中",
+      "en": "In Dev",
+      "ja": "開発中",
+      "fr": "En cours"
+    },
+    "isActive": true,
+    "name": "Nebula API Gateway",
+    "desc": {
+      "zh": "基于 Go 编写的高性能轻量级微服务网关组件。",
+      "en": "High-performance lightweight microservice gateway component written in Go.",
+      "ja": "Goで書かれた高性能な軽量マイクロサービスゲートウェイコンポーネント。",
+      "fr": "Composant de passerelle de microservices léger et performant écrit en Go."
+    }
+  },
+  {
+    "id": "p2",
+    "status": {
+      "zh": "开源",
+      "en": "Open Source",
+      "ja": "オープンソース",
+      "fr": "Open Source"
+    },
+    "isActive": false,
+    "name": "Aervan UI Kit",
+    "desc": {
+      "zh": "一套专为极客设计的极简前端组件库。",
+      "en": "A minimalist frontend component library designed for geeks.",
+      "ja": "ギーク向けに設計されたミニマルなフロントエンドコンポーネントライブラリ。",
+      "fr": "Une bibliothèque de composants frontend minimaliste conçue pour les geeks."
+    }
+  },
+  {
+    "id": "p3",
+    "status": {
+      "zh": "已完成",
+      "en": "Completed",
+      "ja": "完了",
+      "fr": "Terminé"
+    },
+    "isActive": false,
+    "name": {
+      "zh": "企业级 SaaS 数据看板",
+      "en": "Enterprise SaaS Dashboard",
+      "ja": "エンタープライズSaaSダッシュボード",
+      "fr": "Tableau de bord SaaS d'entreprise"
+    },
+    "desc": {
+      "zh": "多维度实时数据可视化系统。",
+      "en": "Multi-dimensional real-time data visualization system.",
+      "ja": "多次元リアルタイムデータ可視化システム。",
+      "fr": "Système de visualisation de données en temps réel multidimensionnel."
+    }
+  }
+]

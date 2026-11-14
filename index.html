@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Aervan Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 遮罩层 -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- 侧边导航栏 (左侧滑出) -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span>[A]</span> Aervan Studio
+            </div>
+            <button class="close-btn" id="closeBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+        </div>
+        
+        <nav class="side-nav">
+            <a href="#" class="nav-link active" data-target="home" data-i18n="nav.home">首页概览</a>
+            <a href="#" class="nav-link" data-target="services" data-i18n="nav.services">业务领域</a>
+            <a href="#" class="nav-link" data-target="projects" data-i18n="nav.projects">我们的项目</a>
+            <a href="#" class="nav-link" data-target="join" data-i18n="nav.join">加入团队</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Aervan Studio</span>
+            <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+                <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                    <path fill="currentColor" d="M240.448 240.448a384 384 0 1 0 559.424 525.696 448 448 0 0 1-542.016-542.08 390.592 390.592 0 0 0-17.408 16.384zm181.056 362.048a384 384 0 0 0 525.632 16.384A448 448 0 1 1 405.056 76.8a384 384 0 0 0 16.448 525.696z"/>
+                </svg>
+                <svg id="sunIcon" style="display:none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                    <path fill="currentColor" d="M512 704a192 192 0 1 1 0-384 192 192 0 0 1 0 384zm0 64a256 256 0 1 0 0-512 256 256 0 0 0 0 512zm0-640a32 32 0 0 1 32 32v64a32 32 0 1 1-64 0V160a32 32 0 0 1 32-32zm0 768a32 32 0 0 1-32-32v-64a32 32 0 1 1 64 0v64a32 32 0 0 1-32 32zM195.2 195.2a32 32 0 0 1 45.248 0l45.248 45.248a32 32 0 1 1-45.248 45.248L195.2 240.448a32 32 0 0 1 0-45.248zm588.8 588.8a32 32 0 0 1 45.248 0l45.248 45.248a32 32 0 1 1-45.248 45.248l-45.248-45.248a32 32 0 0 1 0-45.248zM160 512a32 32 0 0 1 32-32h64a32 32 0 1 1 0 64H192a32 32 0 0 1-32-32zm768 0a32 32 0 0 1-32 32h-64a32 32 0 1 1 0-64h64a32 32 0 0 1 32 32zM195.2 828.8a32 32 0 0 1 0-45.248l45.248-45.248a32 32 0 1 1 45.248 45.248l-45.248 45.248a32 32 0 0 1-45.248 0zm588.8-588.8a32 32 0 0 1 0-45.248l45.248-45.248a32 32 0 1 1 45.248 45.248l-45.248 45.248a32 32 0 0 1-45.248 0z"/>
+                </svg>
+            </button>
+        </div>
+    </aside>
+
+    <!-- 右侧主内容 -->
+    <main class="main-content">
+        <!-- 顶栏 (左边菜单按钮，右边语言切换) -->
+        <header class="top-header">
+            <button class="menu-btn" id="menuBtn" title="菜单">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8h16M4 16h16"/></svg>
+            </button>
+            
+            <div class="lang-switcher">
+                <select id="langSelect">
+                    <option value="zh">中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- 内容容器 -->
+        <div class="content-wrapper">
+            <!-- 首页 -->
+            <section id="home" class="page-section active">
+                <div class="hero">
+                    <h1 data-i18n-html="home.title">构筑数字世界的<br>底层驱动力。</h1>
+                    <p class="hero-desc" data-i18n-html="home.desc">
+                        <strong>Aervan Studio</strong> 是一支独立且专注的先锋技术团队。我们以极致的工程化标准，将创意转化为高可用、高性能的数字产品。
+                    </p>
+                    <div class="btn-group">
+                        <button class="btn btn-primary nav-link" data-target="projects" data-i18n="home.btn1">查看项目</button>
+                        <button class="btn btn-secondary nav-link" data-target="join" data-i18n="home.btn2">加入我们</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 业务 -->
+            <section id="services" class="page-section">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="services.title">业务领域</h2>
+                    <div class="section-subtitle">// OUR EXPERTISE</div>
+                </div>
+                <div class="grid-services">
+                    <div class="card-service">
+                        <div class="icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M896 128H128c-35.2 0-64 28.8-64 64v512c0 35.2 28.8 64 64 64h320v64H288c-17.664 0-32 14.336-32 32s14.336 32 32 32h448c17.664 0 32-14.336 32-32s-14.336-32-32-32H576v-64h320c35.2 0 64-28.8 64-64V192c0-35.2-28.8-64-64-64zM128 704V192h768v512H128z"/></svg>
+                        </div>
+                        <h3 data-i18n="s1.title">全栈软件开发</h3>
+                        <p data-i18n="s1.desc">从响应式 Web 应用到跨平台应用，我们提供高标准的交互设计与前端工程化落地。</p>
+                    </div>
+                    <div class="card-service">
+                        <div class="icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 128c-211.744 0-384 172.256-384 384s172.256 384 384 384 384-172.256 384-384-172.256-384-384-384z m0 704C335.36 832 192 688.64 192 512S335.36 192 512 192s320 143.36 320 320-143.36 320-320 320z"/><path fill="currentColor" d="M704 480H320c-17.664 0-32 14.336-32 32s14.336 32 32 32h384c17.664 0 32-14.336 32-32s-14.336-32-32-32z"/><path fill="currentColor" d="M512 320c-17.664 0-32 14.336-32 32v320c0 17.664 14.336 32 32 32s32-14.336 32-32V352c0-17.664-14.336-32-32-32z"/></svg>
+                        </div>
+                        <h3 data-i18n="s2.title">后端架构设计</h3>
+                        <p data-i18n="s2.desc">构建高并发、高可用系统。精通数据库优化、API 网关设计及分布式系统部署。</p>
+                    </div>
+                    <div class="card-service">
+                        <div class="icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M896 512c0-35.2-28.8-64-64-64H678.08c-17.696-84.896-79.2-153.088-160.32-181.312V192c0-35.2-28.8-64-64-64s-64 28.8-64 64v74.688c-81.12 28.224-142.624 96.416-160.32 181.312H192c-35.2 0-64 28.8-64 64s28.8 64 64 64h37.44c17.696 84.896 79.2 153.088 160.32 181.312V832c0 35.2 28.8 64 64 64s64-28.8 64-64v-74.688c81.12-28.224 142.624-96.416 160.32-181.312H832c35.2 0 64-28.8 64-64z m-384 160c-88.384 0-160-71.616-160-160s71.616-160 160-160 160 71.616 160 160-71.616 160-160 160z"/></svg>
+                        </div>
+                        <h3 data-i18n="s3.title">云原生与运维</h3>
+                        <p data-i18n="s3.desc">基于容器化部署与 CI/CD 流水线，让软件交付更加敏捷、安全、丝滑。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 项目 -->
+            <section id="projects" class="page-section">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="projects.title">我们的项目</h2>
+                    <div class="section-subtitle">// WHAT WE BUILT</div>
+                </div>
+                <!-- 动态渲染容器 -->
+                <div class="project-list" id="project-list-container">
+                    <div style="color: var(--text-muted); font-size: 0.9rem; padding: 2rem 0;">Loading projects data...</div>
+                </div>
+            </section>
+
+            <!-- 加入 -->
+            <section id="join" class="page-section">
+                <div class="join-container">
+                    <h2 data-i18n="join.title">成为先锋的一员。</h2>
+                    <p data-i18n="join.desc">Aervan Studio 正在寻找对技术有极致追求的开发者、设计师或产品极客。</p>
+                    <ul class="join-list">
+                        <li data-i18n="join.li1">不讲职场厚黑学，只看代码质量</li>
+                        <li data-i18n="join.li2">拥抱开源与前沿技术栈</li>
+                        <li data-i18n="join.li3">支持 Remote 与弹性工作</li>
+                    </ul>
+                    <a href="mailto:contact@aervan.top" class="btn btn-primary" data-i18n="join.btn">发送简历与作品集</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- 页脚 -->
+        <footer>
+            <div class="footer-left">
+                <div class="footer-logo"><span>[A]</span> Aervan Studio</div>
+                <p>copyrigth &copy; Aervan Studio. 2026<br><span data-i18n="footer.desc">由热爱技术的独立团队构建与运营。</span></p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-title" data-i18n="footer.links">关联站点 / 友情链接</div>
+                <ul class="footer-links">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        <a href="https://levaer.cn" target="_blank">levaer.cn</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
