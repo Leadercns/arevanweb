@@ -109,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             // 如果由于双击打开被浏览器拦截，则自动使用内置的备用数据
             console.warn('无法读取外部 projects.json（可能是跨域限制），已自动切换到内置备用数据。');
+            renderProjects(currentLang);
         }
     }
 
